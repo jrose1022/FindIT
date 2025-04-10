@@ -27,14 +27,6 @@ function SignUpComponent() {
 
   };
 
-  const handleResetPasswordClick = (e) => {
-
-    e.preventDefault();
-
-    navigate('/ResetPassword');
-
-  };
-
 
   const handleCheckboxChange = (e) => {
 
@@ -104,8 +96,6 @@ function SignUpComponent() {
             </span>
 
           </div>
-
-          <a href="#" onClick={handleResetPasswordClick} className="text-dark d-block mt-3 mb-4">Forgot Password?</a>
 
         </div>
 
