@@ -13,14 +13,6 @@ function ResetPasswordComponent() {
 
   };
 
-  const handleResetPasswordClick = (e) => {
-
-    e.preventDefault();
-
-    navigate('/ResetPassword');
-
-  };
-
 
   return (
 
@@ -73,13 +65,10 @@ function ResetPasswordComponent() {
             </span>
 
           </div>
-      
-
-          <a href="#" onClick={handleResetPasswordClick} className="text-dark d-block mt-3 mb-4">Forgot Password?</a>
 
         </div>
 
-        <button type="submit" className="btn btn-dark w-100" >Save</button>
+        <button type="submit" className="mt-4 btn btn-dark w-100" >Save</button>
 
         <div className="text-center mt-4">
 
@@ -87,7 +76,7 @@ function ResetPasswordComponent() {
             
             Don't have an account?
 
-            <a href="#" onClick={handleSignUpClick} className="text-dark">Sign Up</a>
+            <a href="#" onClick={handleSignUpClick} className="text-dark m-2">Sign Up</a>
 
           </p>
 
