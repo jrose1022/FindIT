@@ -69,7 +69,7 @@ function LoginComponent() {
 
             Don't have an account? 
 
-            <a href='#' onClick={handleSignUpClick} className="m-2 text-dark fw-bold" >
+            <a href='#' onClick={handleSignUpClick} className="m-2 text-dark" >
 
               Sign Up
 

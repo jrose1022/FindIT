@@ -5,11 +5,13 @@ import ResetPassword from "./pages/Reset-Password";
 import AdminPage from "./pages/AdminPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+import AccessControlPage from "./pages/Access-Control-Page";
 
 function App() {
 
   return (
 
+    
     <Routes>
 
       <Route path="/" element={<Login />} /> 
@@ -20,7 +22,11 @@ function App() {
 
       <Route path="/Admin" element={<AdminPage />} />
 
+
+
     </Routes>
+
+
     
   );
 }
