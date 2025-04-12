@@ -1,15 +1,18 @@
-import { Eye } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function LoginComponent() {
-  
+
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSignUpClick = (e) => {
 
     e.preventDefault();
 
     navigate('/SignUp');
+
   };
 
   const handleResetPasswordClick = (e) => {
@@ -33,11 +36,12 @@ function LoginComponent() {
       </div>
 
       <form>
+
         <div className="mb-4">
 
           <label className="form-label fw-bold">Username</label>
 
-          <input type="text" className="form-control" placeholder="Enter your Username" required/>
+          <input type="text" className="form-control" placeholder="Enter your Username" required />
 
         </div>
 
@@ -47,17 +51,31 @@ function LoginComponent() {
 
           <div className="input-group">
 
-            <input type="password" className="form-control" placeholder="Enter your Password" required />
+            <input
 
-            <span className="input-group-text" role="button">
+              type={showPassword ? 'text' : 'password'}
 
-              <Eye />
+              className="form-control"
+
+              placeholder="Enter your Password"
+
+              required
+
+            />
+
+            <span className="input-group-text" role="button" onClick={() => setShowPassword(!showPassword)}>
+
+              {showPassword ? <EyeOff /> : <Eye />}
 
             </span>
 
           </div>
 
-          <a href="#"  onClick={handleResetPasswordClick} className="text-dark d-block mt-2">Forgot Password?</a>
+          <a href="#" onClick={handleResetPasswordClick} className="text-dark d-block mt-2">
+
+            Forgot Password?
+
+          </a>
 
         </div>
 
@@ -67,9 +85,9 @@ function LoginComponent() {
 
           <p>
 
-            Don't have an account? 
+            Don't have an account?
 
-            <a href='#' onClick={handleSignUpClick} className="m-2 text-dark" >
+            <a href="#" onClick={handleSignUpClick} className="m-2 text-dark">
 
               Sign Up
 
@@ -78,11 +96,13 @@ function LoginComponent() {
           </p>
 
         </div>
-        
+
       </form>
 
     </div>
+
   );
+  
 }
 
 export default LoginComponent;

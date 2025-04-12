@@ -1,9 +1,11 @@
-import { Eye } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function ResetPasswordComponent() {
 
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSignUpClick = (e) => {
 
@@ -43,9 +45,9 @@ function ResetPasswordComponent() {
 
             <input type="password" className="form-control" placeholder="Create New Password" />
 
-            <span className="input-group-text" role="button">
+            <span className="input-group-text" role="button" onClick={() => setShowPassword(!showPassword)}>
 
-              <Eye />
+              {showPassword ? <EyeOff /> : <Eye />}
 
             </span>
 
@@ -58,9 +60,9 @@ function ResetPasswordComponent() {
 
             <input type="password" className="form-control" placeholder="Confirm your Password" />
 
-            <span className="input-group-text" role="button">
+            <span className="input-group-text" role="button" onClick={() => setShowPassword(!showPassword)}>
 
-             <Eye />
+              {showPassword ? <EyeOff /> : <Eye />}
 
             </span>
 
