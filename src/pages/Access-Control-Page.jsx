@@ -1,6 +1,5 @@
 import Sidebar from "../components/Sidebar";
-import TableComponent from "../components/Table-Component";
-import SearchBar from "../components/SearchBar-Component";
+import AddItemsComponent from "../components/Add-Items-Component";
 
 function AccessControlPage(){
 
@@ -10,10 +9,8 @@ function AccessControlPage(){
         <div className="d-flex">
             <Sidebar/>
             <div className="m-5  w-75 " >
-                <div>
-                    <SearchBar/>
-                </div>
-                <TableComponent/>
+                
+                <AddItemsComponent/>
             </div>
         </div>
           

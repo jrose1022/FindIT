@@ -6,6 +6,8 @@ import AdminPage from "./pages/AdminPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import AccessControlPage from "./pages/Access-Control-Page";
+import 'react-datepicker/dist/react-datepicker.css';
+
 
 function App() {
 
