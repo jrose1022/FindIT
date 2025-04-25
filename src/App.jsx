@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import AccessControlPage from "./pages/Access-Control-Page";
 import 'react-datepicker/dist/react-datepicker.css';
+import LostItemPage from "./pages/Lost-Item-Page";
 
 
 function App() {
@@ -22,13 +23,14 @@ function App() {
 
       <Route path="/ResetPassword" element={<ResetPassword />} />
 
-      <Route path="/Admin" element={<AdminPage />} />
+     <Route path="/Admin" element={<AdminPage />} />
 
 
 
-    </Routes>
+   </Routes>
 
     //<AccessControlPage/>
+    // <LostItemPage/>
 
 
     

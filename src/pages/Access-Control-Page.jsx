@@ -6,13 +6,7 @@ function AccessControlPage(){
     return(
         
         
-        <div className="d-flex">
-            <Sidebar/>
-            <div className="m-5  w-75 " >
-                
-                <AddItemsComponent/>
-            </div>
-        </div>
+        <></>
           
         
     );
